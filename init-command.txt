@@ -62,3 +62,4 @@ To https://github.com/Ajithkumar752/repo-with-init.git
  * [new branch]      master -> master
 [ec2-user@ip-172-31-15-191 gitinit]$
 
+ajith commiting changes
