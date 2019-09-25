@@ -1,1 +1,64 @@
-this is 
+[ec2-user@ip-172-31-15-191 ~]$ mkdir gitinit
+[ec2-user@ip-172-31-15-191 ~]$ cd gitinit/
+[ec2-user@ip-172-31-15-191 gitinit]$ ls -al
+total 0
+drwxrwxr-x 2 ec2-user ec2-user   6 Sep 25 10:31 .
+drwx------ 6 ec2-user ec2-user 135 Sep 25 10:31 ..
+[ec2-user@ip-172-31-15-191 gitinit]$ git init
+Initialized empty Git repository in /home/ec2-user/gitinit/.git/
+[ec2-user@ip-172-31-15-191 gitinit]$ ls -al
+total 0
+drwxrwxr-x 3 ec2-user ec2-user  18 Sep 25 10:31 .
+drwx------ 6 ec2-user ec2-user 135 Sep 25 10:31 ..
+drwxrwxr-x 7 ec2-user ec2-user 119 Sep 25 10:31 .git
+[ec2-user@ip-172-31-15-191 gitinit]$ vi init-command.txt
+[ec2-user@ip-172-31-15-191 gitinit]$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        init-command.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+[ec2-user@ip-172-31-15-191 gitinit]$ git add init-command.txt
+[ec2-user@ip-172-31-15-191 gitinit]$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   init-command.txt
+
+[ec2-user@ip-172-31-15-191 gitinit]$ git commit -m "init command lab"
+[master (root-commit) 91885a6] init command lab
+ Committer: EC2 Default User <ec2-user@ip-172-31-15-191.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 init-command.txt
+[ec2-user@ip-172-31-15-191 gitinit]$ git remote add origin  https://github.com/Ajithkumar752/repo-with-init.git
+[ec2-user@ip-172-31-15-191 gitinit]$ git push origin master
+Username for 'https://github.com': Ajithkumar752
+Password for 'https://Ajithkumar752@github.com':
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 258 bytes | 258.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Ajithkumar752/repo-with-init.git
+ * [new branch]      master -> master
+[ec2-user@ip-172-31-15-191 gitinit]$
+
